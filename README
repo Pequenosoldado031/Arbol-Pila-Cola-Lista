@@ -1,0 +1,25 @@
+codigo fuente de 4 estructuras de datos dinamicas
+
+REALIZADO:
+
+>clase lista con todas sus funciones
+
+>clase pila con todas sus funciones
+
+>clase Cola con todas sus funciones
+
+>clase arbol con casi todas sus funciones
+
+FALTA:
+>Realizar funcion Buscar del Arbol
+
+>Realizar Funcion Eiminar del arbol
+
+OBSERVACIONES:
+
+el codigo escrito en la funcion main lee informacion de un fichero de texto
+que es ingresado a la clase arbol, y a medida que se van utilizando las
+funciones InOrden, PreOrden, PostOrden, se va ingresando informacion dentro
+de una Cola, Lista, Pila, respectivamente. terminado esto se crearan nuevos
+archivos de texto donde se guardaran los datos de cada una de las estructuras
+dinamicas
