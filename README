@@ -23,3 +23,9 @@ funciones InOrden, PreOrden, PostOrden, se va ingresando informacion dentro
 de una Cola, Lista, Pila, respectivamente. terminado esto se crearan nuevos
 archivos de texto donde se guardaran los datos de cada una de las estructuras
 dinamicas
+
+RECOMENDACIONES:
+
+si se utiliza ubuntu o alguna distribucion de linux, el proyecto ya esta listo para compilar
+con cmake, hay que tener en cuenta que hay que copear el archivo Fichero.txt en la carpeta
+donde se va a crear el ejecutable
