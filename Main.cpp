@@ -1,36 +1,29 @@
 #include "Cancion.h"
+#include "Producto.h"
 #include "Arbol.h"
 template<typename L,typename A>
 void Ordenar(L&, A&);
 template<typename AR, typename PI, typename CO>
 void Guardar(AR&, PI&, CO&);
 int main(){
-	Arbol<Cancion> musical;
-	musical.Abrir("Fichero.txt");
-	Cola<Cancion> Compra;
+	Arbol<Producto> tienda;
+	tienda.Abrir("Fichero.txt");
+	Cola<Producto> Compra;
 	std::cout<<"Recorrido InOrden\n";
-	musical.InOrden(musical.getRaiz(), Compra);
+	tienda.InOrden(Compra);
 	std::cin.get();
-	Lista<Cancion> Lista;
-	std::cout<<"Racorrido PreOrden\n";
-	musical.PreOrden(musical.getRaiz(), Lista);
-	std::cin.get();
-	Pila<Cancion> Reproduccion;
+	Pila<Producto> reserva;
 	std::cout<<"Recorrido Postorden\n";
-	musical.PostOrden(musical.getRaiz(), Reproduccion);
+	tienda.PostOrden(reserva);
 	std::cin.get();
 	std::cout<<"Datos Cola\n";
 	Compra.mostrar();
 	std::cin.get();
-	std::cout<<"Datos Lista\n";
-	Lista.Mostrar();
-	std::cin.get();
 	std::cout<<"Datos Pila\n";
-	Reproduccion.mostrar();
+	reserva.mostrar();
 	std::cin.get();
-	Compra.Guardar("DatosCola.txt");
-	Lista.guardar("DatosLista.txt");
-	Reproduccion.Guardar("DatosPila.txt");
+	Compra.Guardar("ColaArbol.txt");
+	reserva.Guardar("PilaArbol.txt");
 	std::cout<<"Datos guardados, presione enter para continuar\n";
 	std::cin.get();
 	return 0;

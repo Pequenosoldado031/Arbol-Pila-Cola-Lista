@@ -58,7 +58,7 @@ void Lista<T>::guardar(string txt) {
 	ofstream guarda(txt.c_str());
 	NodoL<T> *aux = getInicio();
 	while (aux) {
-		guarda << aux->getDatos()->getNombre() <<" "<< aux->getDatos()->getGenero() <<" "<< aux->getDatos()->getPrecio() << std::endl;
+		guarda << aux->getDatos()->getPrecio() <<" "<< aux->getDatos()->getMarca() <<" "<< aux->getDatos()->getPrecio() << std::endl;
 		aux = aux->getSiguiente();
 	}
 }
@@ -91,8 +91,8 @@ void Lista<T>::Mostrar() {
 		if (getInicio() == getFinal()) {
 			//si son iguales solo imprime la imformacion del nodo inicio
 			NodoL<T> *aux = getInicio();
-			std::cout << "Nombre: " << aux->getDatos()->getNombre() << std::endl;
-			std::cout << "Genero: " << aux->getDatos()->getGenero() << std::endl;
+			std::cout << "Nombre: " << aux->getDatos()->getProducto() << std::endl;
+			std::cout << "Genero: " << aux->getDatos()->getMarca() << std::endl;
 			std::cout << "Precio: " << aux->getDatos()->getPrecio() << std::endl;
 		}//si no son iguales
 		else {
@@ -101,8 +101,8 @@ void Lista<T>::Mostrar() {
 			//mientras exista auxiliar "aux sea diferente de NULL"
 			while (aux) {
 				//inprime los datos contenidos en la lista
-				std::cout << "Nombre: " << aux->getDatos()->getNombre() << std::endl;
-				std::cout << "Genero: " << aux->getDatos()->getGenero() << std::endl;
+				std::cout << "Nombre: " << aux->getDatos()->getProducto() << std::endl;
+				std::cout << "Genero: " << aux->getDatos()->getMarca() << std::endl;
 				std::cout << "Precio: " << aux->getDatos()->getPrecio() << std::endl;
 				//aux obtendra los datos del apuntador siguiente
 				aux = aux->getSiguiente();
